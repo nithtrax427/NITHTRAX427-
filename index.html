@@ -1,0 +1,613 @@
+ <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RUIRU MABATI FACTORY LTD | QUALITY ROOFING SHEETS</title>
+
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: system-ui, -apple-system, sans-serif;
+            background-color: #0b1120;
+            color: #f8fafc;
+            position: relative;
+            width: 100%;
+        }
+
+        /* Ambient Background Glow Effect */
+        body::before {
+            content: '';
+            position: fixed;
+            top: 10%;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 300px;
+            height: 300px;
+            background: radial-gradient(circle, rgba(2, 132, 199, 0.25) 0%, rgba(0,0,0,0) 70%);
+            pointer-events: none;
+            z-index: 0;
+            filter: blur(40px);
+        }
+
+        /* Fixed background watermark grid layer with Filter Enhancements */
+        .watermark-grid {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100vw;
+            height: 100vh;
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 20px;
+            padding: 20px;
+            opacity: 0.12;
+            pointer-events: none;
+            z-index: 0;
+            filter: grayscale(40%) contrast(120%) brightness(85%);
+        }
+
+        .watermark-grid img {
+            width: 100%;
+            height: 120px;
+            object-fit: contain;
+        }
+
+        /* Foreground Content Layer */
+        .content-layer {
+            position: relative;
+            z-index: 1;
+        }
+
+        /* Red Phone Header Bar with Glass Blur */
+        .phone-bar {
+            background-color: rgba(220, 38, 38, 0.9);
+            backdrop-filter: blur(8px);
+            -webkit-backdrop-filter: blur(8px);
+            color: #ffffff;
+            text-align: center;
+            padding: 10px 15px;
+            font-size: 1.3rem;
+            font-weight: 700;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+            text-decoration: none;
+            box-shadow: 0 4px 15px rgba(220, 38, 38, 0.3);
+        }
+
+        .phone-bar:hover {
+            background-color: #dc2626;
+        }
+
+        /* Glassmorphism Navbar & Tagline Section */
+        .navbar {
+            background: rgba(15, 23, 42, 0.75);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+            padding: 15px 20px;
+            text-align: center;
+            border-bottom: 2px solid rgba(2, 132, 199, 0.6);
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4);
+        }
+
+        .tagline {
+            font-size: 0.95rem;
+            color: #e2e8f0;
+            margin-bottom: 8px;
+            font-weight: 500;
+        }
+
+        .logo h2 {
+            font-size: 1.6rem;
+            letter-spacing: 1px;
+            color: #ffffff;
+            text-shadow: 0 0 10px rgba(255, 255, 255, 0.4);
+            text-transform: uppercase;
+            font-weight: 900;
+            margin-bottom: 6px;
+        }
+
+        .logo span {
+            color: #ef4444;
+            filter: drop-shadow(0 0 6px rgba(239, 68, 68, 0.6));
+        }
+
+        /* Location Styling */
+        .location-notice {
+            font-size: 0.95rem;
+            color: #facc15;
+            font-weight: 700;
+            text-transform: uppercase;
+            margin-bottom: 12px;
+            letter-spacing: 0.5px;
+            filter: drop-shadow(0 0 4px rgba(250, 204, 21, 0.4));
+        }
+
+        .delivery-notice {
+            margin-bottom: 12px;
+            color: #38bdf8;
+            font-weight: 700;
+            font-size: 0.9rem;
+            letter-spacing: 0.5px;
+            text-transform: uppercase;
+        }
+
+        /* Blinking Lipa Mdogomdogo Paragraph */
+        .lipa-notice {
+            font-size: 0.95rem;
+            font-weight: 800;
+            letter-spacing: 0.8px;
+            text-transform: uppercase;
+            margin-bottom: 15px;
+            animation: blinkBlueGreen 1.2s infinite ease-in-out;
+        }
+
+        @keyframes blinkBlueGreen {
+            0%, 100% {
+                color: #38bdf8;
+                opacity: 1;
+                filter: drop-shadow(0 0 6px rgba(56, 189, 248, 0.8));
+            }
+            50% {
+                color: #22c55e;
+                opacity: 0.4;
+                filter: drop-shadow(0 0 6px rgba(34, 197, 94, 0.8));
+            }
+        }
+
+        /* Action Buttons Grid */
+        .action-buttons {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 10px;
+            max-width: 500px;
+            margin: 0 auto;
+        }
+
+        .btn-action {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 10px 5px;
+            font-size: 0.85rem;
+            font-weight: 700;
+            color: #ffffff;
+            text-decoration: none;
+            border-radius: 6px;
+            text-align: center;
+            transition: all 0.3s ease;
+        }
+
+        .btn-action:hover {
+            transform: translateY(-2px);
+            filter: brightness(115%);
+        }
+
+        .btn-whatsapp { background-color: #25d366; box-shadow: 0 4px 12px rgba(37, 211, 102, 0.3); }
+        .btn-call { background-color: #dc2626; box-shadow: 0 4px 12px rgba(220, 38, 38, 0.3); }
+        
+        /* Main Header Order Button */
+        .btn-order-main {
+            background-color: #16a34a;
+            grid-column: span 2;
+            font-size: 1.05rem;
+            padding: 12px;
+            box-shadow: 0 0 15px rgba(22, 163, 74, 0.5);
+        }
+
+        /* Pricing Section Container with Backdrop Blur */
+        .pricing-section {
+            max-width: 800px;
+            margin: 25px auto;
+            padding: 0 15px;
+        }
+
+        .pricing-card {
+            background: rgba(30, 41, 59, 0.65);
+            backdrop-filter: blur(10px);
+            -webkit-backdrop-filter: blur(10px);
+            border: 1px solid rgba(56, 189, 248, 0.4);
+            border-radius: 14px;
+            padding: 20px;
+            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.5);
+        }
+
+        .pricing-header {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        .pricing-header h3 {
+            color: #38bdf8;
+            font-size: 1.2rem;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            margin-bottom: 5px;
+        }
+
+        .pricing-subtitle {
+            color: #facc15;
+            font-size: 1.1rem;
+            font-weight: 800;
+            text-transform: uppercase;
+        }
+
+        /* Price List Grid */
+        .price-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 15px;
+        }
+
+        @media (max-width: 480px) {
+            .price-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        .price-item {
+            background-color: rgba(15, 23, 42, 0.6);
+            border-left: 4px solid #0284c7;
+            border-radius: 6px;
+            padding: 12px;
+            transition: transform 0.2s ease;
+        }
+
+        .price-item:hover {
+            transform: scale(1.02);
+        }
+
+        .price-item h4 {
+            color: #38bdf8;
+            font-size: 1.05rem;
+            margin-bottom: 6px;
+        }
+
+        .price-item ul {
+            list-style: none;
+            font-size: 0.95rem;
+        }
+
+        .price-item li {
+            padding: 2px 0;
+            color: #f8fafc;
+        }
+
+        .price-item strong {
+            color: #4ade80;
+        }
+
+        .price-item.full-width {
+            grid-column: 1 / -1;
+        }
+
+        /* Products Showcase Section */
+        .gallery-section {
+            max-width: 900px;
+            margin: 30px auto 20px auto;
+            padding: 0 15px;
+        }
+
+        .section-title {
+            text-align: center;
+            color: #38bdf8;
+            font-size: 1.5rem;
+            margin-bottom: 20px;
+            text-transform: uppercase;
+            border-bottom: 2px solid #0284c7;
+            padding-bottom: 8px;
+        }
+
+        .products-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+            gap: 20px;
+        }
+
+        /* Product Card Visual Enhancements */
+        .product-card {
+            background-color: rgba(30, 41, 59, 0.7);
+            backdrop-filter: blur(8px);
+            -webkit-backdrop-filter: blur(8px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            border-radius: 12px;
+            overflow: hidden;
+            display: flex;
+            flex-direction: column;
+            transition: all 0.3s ease;
+            box-shadow: 0 8px 20px rgba(0,0,0,0.3);
+        }
+
+        .product-card:hover {
+            transform: translateY(-5px);
+            border-color: #0284c7;
+            box-shadow: 0 12px 30px rgba(2, 132, 199, 0.25);
+        }
+
+        /* Product Image Filters & Zoom on Hover */
+        .product-card img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+            border-bottom: 2px solid #0284c7;
+            filter: contrast(105%) brightness(95%);
+            transition: transform 0.4s ease, filter 0.4s ease;
+        }
+
+        .product-card:hover img {
+            transform: scale(1.06);
+            filter: contrast(110%) brightness(105%);
+        }
+
+        .product-info {
+            padding: 15px;
+            display: flex;
+            flex-direction: column;
+            flex-grow: 1;
+        }
+
+        .product-title {
+            font-size: 1.1rem;
+            color: #f8fafc;
+            font-weight: 700;
+            margin-bottom: 5px;
+        }
+
+        .product-price {
+            color: #4ade80;
+            font-size: 1rem;
+            font-weight: 800;
+            margin-bottom: 8px;
+            filter: drop-shadow(0 0 4px rgba(74, 222, 128, 0.3));
+        }
+
+        .product-desc {
+            font-size: 0.85rem;
+            color: #cbd5e1;
+            margin-bottom: 12px;
+            line-height: 1.4;
+        }
+
+        .value-tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 6px;
+            margin-top: auto;
+            margin-bottom: 12px;
+        }
+
+        .tag {
+            background-color: #0284c7;
+            color: #ffffff;
+            font-size: 0.7rem;
+            font-weight: 700;
+            padding: 3px 8px;
+            border-radius: 4px;
+            text-transform: uppercase;
+        }
+
+        .tag.warranty { background-color: #eab308; color: #000; }
+        .tag.kebs { background-color: #16a34a; }
+        .tag.delivery { background-color: #dc2626; }
+
+        .btn-card-order {
+            background-color: #16a34a;
+            color: #ffffff;
+            text-decoration: none;
+            text-align: center;
+            padding: 10px;
+            border-radius: 6px;
+            font-weight: 700;
+            font-size: 0.9rem;
+            transition: all 0.2s ease;
+            box-shadow: 0 4px 10px rgba(22, 163, 74, 0.3);
+        }
+
+        .btn-card-order:hover {
+            background-color: #15803d;
+            box-shadow: 0 6px 15px rgba(22, 163, 74, 0.5);
+        }
+
+        /* Direct Contact Info Block with Glassmorphism */
+        .contact-info-block {
+            background: rgba(30, 41, 59, 0.7);
+            backdrop-filter: blur(10px);
+            -webkit-backdrop-filter: blur(10px);
+            border: 2px solid #0284c7;
+            border-radius: 12px;
+            padding: 20px;
+            margin-top: 25px;
+            text-align: center;
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.4);
+        }
+
+        .contact-title {
+            color: #38bdf8;
+            font-size: 1.2rem;
+            margin-bottom: 10px;
+            font-weight: 800;
+            text-transform: uppercase;
+        }
+
+        .contact-details {
+            font-size: 0.95rem;
+            color: #cbd5e1;
+            line-height: 1.8;
+        }
+
+        .contact-details a {
+            color: #38bdf8;
+            text-decoration: none;
+            font-weight: 700;
+        }
+
+        .badge-247 {
+            display: inline-block;
+            background-color: #dc2626;
+            color: #ffffff;
+            font-size: 0.75rem;
+            padding: 2px 8px;
+            border-radius: 12px;
+            margin-left: 6px;
+            font-weight: bold;
+            box-shadow: 0 0 8px rgba(220, 38, 38, 0.6);
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Watermark Images Container with Filter Adjustments -->
+    <div class="watermark-grid">
+        <img src="IMG-20260730-WA0000.jpg" alt="watermark">
+        <img src="IMG-20260730-WA0002.jpg" alt="watermark">
+        <img src="IMG-20260730-WA0003.jpg" alt="watermark">
+        <img src="images.jpeg" alt="watermark">
+        <img src="images (1).jpeg" alt="watermark">
+        <img src="images (2).jpeg" alt="watermark">
+    </div>
+
+    <!-- Main Content Layer -->
+    <div class="content-layer">
+        
+        <!-- Top Phone Call Bar -->
+        <a href="tel:0108227737" class="phone-bar">
+            📞 0108 227 737
+        </a>
+
+        <header class="navbar">
+            <p class="tagline">Leading Roofing Sheets & Construction Materials Supplier in Kenya</p>
+            
+            <div class="logo">
+                <h2>RUIRU <span>MABATI FACTORY</span></h2>
+            </div>
+
+            <!-- Location Line Added -->
+            <p class="location-notice">📍 Location: Ruiru Mabati, Along Kamiti Road</p>
+
+            <p class="delivery-notice">WE OFFER FREE DELIVERY ALL OVER THE COUNTRY</p>
+            
+            <!-- Blinking Lipa Mdogomdogo Paragraph -->
+            <p class="lipa-notice">WE OFFER LIPA MDOGOMDOGO , WITH ONLY 10% DEPOSIT OF THE TOTAL PRICE</p>
+
+            <!-- Action Buttons Row -->
+            <div class="action-buttons">
+                <a href="https://api.whatsapp.com/send?phone=254108227737&text=Hello%20Ruiru%20Mabati%20Factory" target="_blank" class="btn-action btn-whatsapp">WhatsApp</a>
+                <a href="tel:0108227737" class="btn-action btn-call">Call Now</a>
+                
+                <!-- Main Header Order Button -->
+                <a href="order.html" class="btn-action btn-order-main">🛒 Order Now</a>
+            </div>
+        </header>
+
+        <!-- Unbeatable Prices Section -->
+        <section class="pricing-section">
+            <div class="pricing-card">
+                <div class="pricing-header">
+                    <h3>Ruiru Mabati Limited</h3>
+                    <p class="pricing-subtitle">Unbeatable Prices on Premium Roofing Sheets!</p>
+                </div>
+
+                <div class="price-grid">
+                    <div class="price-item">
+                        <h4>#Jenga_Tile</h4>
+                        <ul>
+                            <li>G28 – <strong>Ksh 650</strong></li>
+                            <li>G30 – <strong>Ksh 550</strong></li>
+                        </ul>
+                    </div>
+                    <div class="price-item">
+                        <h4>#Brit_Tile</h4>
+                        <ul>
+                            <li>G28 – <strong>Ksh 650</strong></li>
+                            <li>G30 – <strong>Ksh 550</strong></li>
+                        </ul>
+                    </div>
+                    <div class="price-item">
+                        <h4>#Box_Profile</h4>
+                        <ul>
+                            <li>G28 – <strong>Ksh 500</strong></li>
+                            <li>G30 – <strong>Ksh 400</strong></li>
+                        </ul>
+                    </div>
+                    <div class="price-item">
+                        <h4>#Corrugated</h4>
+                        <ul>
+                            <li>G28 – <strong>Ksh 400</strong></li>
+                            <li>G30 – <strong>Ksh 350</strong></li>
+                        </ul>
+                    </div>
+                    <div class="price-item full-width">
+                        <h4>#Dumuzaz_Ordinary</h4>
+                        <ul>
+                            <li>G28 – <strong>Ksh 350</strong></li>
+                            <li>G30 – <strong>Ksh 300</strong></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Product Gallery Showcase Section -->
+        <section class="gallery-section">
+            <h3 class="section-title">Our Premium Product Gallery</h3>
+            
+            <div class="products-grid">
+
+                <!-- Product 1: Grey Matt Jenga Tile -->
+                <div class="product-card">
+                    <img src="IMG-20260730-WA0000.jpg" alt="Jenga Tile Grey Matt">
+                    <div class="product-info">
+                        <div class="product-title">Jenga Tile – Grey Matt</div>
+                        <div class="product-price">Ksh 550 / Metre</div>
+                        <p class="product-desc">Modern slate-style finish giving a luxury residential look. Built with high fade resistance and premium anti-corrosion layer.</p>
+                        <div class="value-tags">
+                            <span class="tag kebs">KEBS Certified</span>
+                            <span class="tag warranty">15 Year Warranty</span>
+                            <span class="tag delivery">Free Delivery</span>
+                        </div>
+                        <a href="order.html" class="btn-card-order">Order Now</a>
+                    </div>
+                </div>
+
+                <!-- Product 2: Red Matt Jenga Tile -->
+                <div class="product-card">
+                    <img src="IMG-20260730-WA0002.jpg" alt="Jenga Tile Red Matt">
+                    <div class="product-info">
+                        <div class="product-title">Jenga Tile – Red Matt</div>
+                        <div class="product-price">Ksh 550 / Metre</div>
+                        <p class="product-desc">Classic crimson tile profile for modern residential roofing. Strong weather resistance designed to handle heavy downpours.</p>
+                        <div class="value-tags">
+                            <span class="tag kebs">KEBS Certified</span>
+                            <span class="tag warranty">15 Year Warranty</span>
+                            <span class="tag delivery">Free Delivery</span>
+                        </div>
+                        <a href="order.html" class="btn-card-order">Order Now</a>
+                    </div>
+                </div>
+
+                <!-- Product 3: Box Profile Roofing Sheet -->
+                <div class="product-card">
+                    <img src="IMG-20260730-WA0003.jpg" alt="Red Box Profile Sheet">
+                    <div class="product-info">
+                        <div class="product-title">Box Profile Roofing</div>
+                        <div class="product-price">From Ksh 400 / Metre</div>
+                        <p class="product-desc">Heavy-duty trapezoidal profile perfect for commercial buildings, churches, and houses looking for maximum drainage efficiency.</p>
+                        <div class="value-tags">
+                            <span class="tag kebs">KEBS Standard</span>
+                            <span class="tag delivery">Countrywide Delivery</span>
+                        </div>
+                        <a href="order.html" class="btn-card-order">Order Now</a>
+                    </div>
+                </div>
+
+                <!-- Product 4: Bright Blue Box Profile -->
+                <div class="product-card">
+                    <img src="images.jpeg" alt="Blue Box Profile Sheet">
+                    <div c

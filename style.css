@@ -1,0 +1,151 @@
+/* Reset & Base Setup */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: system-ui, -apple-system, sans-serif;
+    /* Sets your uploaded image as the background */
+    background-image: url('1000027133.jpg');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    background-attachment: fixed;
+    background-color: #0f172a; /* Dark fallback background */
+    color: #f8fafc;
+    line-height: 1.6;
+}
+
+/* Header & Logo */
+.navbar {
+    background-color: rgba(30, 41, 59, 0.95);
+    border-bottom: 2px solid #0284c7;
+    padding: 16px 20px;
+    text-align: center;
+}
+
+.logo h2 {
+    font-size: 1.4rem;
+    letter-spacing: 1.5px;
+    color: #ffffff;
+    text-transform: uppercase;
+}
+
+.logo span {
+    color: #38bdf8;
+}
+
+/* Hero Section */
+.hero {
+    background: linear-gradient(180deg, rgba(30, 41, 59, 0.85) 0%, rgba(15, 23, 42, 0.95) 100%);
+    text-align: center;
+    padding: 50px 20px;
+    border-bottom: 1px solid #334155;
+}
+
+.hero h1 {
+    font-size: 1.8rem;
+    color: #f1f5f9;
+    margin-bottom: 10px;
+}
+
+.hero p {
+    color: #cbd5e1;
+    max-width: 600px;
+    margin: 0 auto 20px auto;
+}
+
+.btn-primary {
+    display: inline-block;
+    background-color: #0284c7;
+    color: #ffffff;
+    padding: 12px 24px;
+    border-radius: 6px;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+/* Main Content & Products Grid */
+.main-content {
+    padding: 40px 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.section-title {
+    text-align: center;
+    margin-bottom: 30px;
+    color: #38bdf8;
+}
+
+.container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 20px;
+}
+
+/* Product Cards */
+.card {
+    background-color: rgba(30, 41, 59, 0.9);
+    border: 1px solid #334155;
+    border-radius: 12px;
+    padding: 24px;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.badge {
+    position: absolute;
+    top: 16px;
+    right: 16px;
+    background-color: #0369a1;
+    color: #e0f2fe;
+    font-size: 0.75rem;
+    padding: 4px 8px;
+    border-radius: 4px;
+    text-transform: uppercase;
+    font-weight: bold;
+}
+
+.card h2 {
+    color: #f1f5f9;
+    margin-bottom: 10px;
+}
+
+.card p {
+    color: #94a3b8;
+    font-size: 0.95rem;
+    margin-bottom: 20px;
+}
+
+.details {
+    border-top: 1px solid #334155;
+    padding-top: 12px;
+    font-size: 0.85rem;
+    color: #cbd5e1;
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+}
+
+/* Footer */
+.footer {
+    text-align: center;
+    padding: 30px 20px;
+    background-color: rgba(30, 41, 59, 0.95);
+    border-top: 1px solid #334155;
+    margin-top: 40px;
+}
+
+.footer h3 {
+    color: #38bdf8;
+    margin-bottom: 8px;
+}
+
+.footer p {
+    color: #94a3b8;
+}

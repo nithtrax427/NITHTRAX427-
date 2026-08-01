@@ -1,0 +1,319 @@
+ <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RUIRU MABATI FACTORY LTD | ORDER FORM</title>
+
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: system-ui, -apple-system, sans-serif;
+            background-color: #0f172a;
+            color: #f8fafc;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            position: relative;
+        }
+
+        /* Fixed Background Watermark Layer */
+        .watermark-grid {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100vw;
+            height: 100vh;
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 20px;
+            padding: 20px;
+            opacity: 0.12;
+            pointer-events: none;
+            z-index: 0;
+        }
+
+        .watermark-grid img {
+            width: 100%;
+            height: 140px;
+            object-fit: contain;
+        }
+
+        /* Main Content Layer */
+        .content-layer {
+            position: relative;
+            z-index: 1;
+            flex: 1;
+            padding-bottom: 50px;
+        }
+
+        .navbar {
+            background-color: rgba(15, 23, 42, 0.95);
+            border-bottom: 2px solid #0284c7;
+            padding: 20px;
+            text-align: center;
+        }
+
+        .logo h2 {
+            font-size: 1.5rem;
+            letter-spacing: 1.5px;
+            color: #ffffff;
+            text-transform: uppercase;
+        }
+
+        .logo span {
+            color: #38bdf8;
+        }
+
+        /* Order Section Container */
+        .order-container {
+            max-width: 500px;
+            margin: 30px auto;
+            padding: 25px;
+            background-color: rgba(30, 41, 59, 0.92);
+            border: 1px solid #334155;
+            border-radius: 12px;
+            box-shadow: 0 10px 25px rgba(0,0,0,0.5);
+        }
+
+        .order-container h3 {
+            color: #38bdf8;
+            margin-bottom: 8px;
+            text-align: center;
+            font-size: 1.4rem;
+        }
+
+        .order-container p.subtitle {
+            text-align: center;
+            font-size: 0.9rem;
+            color: #94a3b8;
+            margin-bottom: 20px;
+        }
+
+        .form-group {
+            margin-bottom: 16px;
+        }
+
+        .form-group label {
+            display: block;
+            margin-bottom: 6px;
+            font-size: 0.9rem;
+            color: #cbd5e1;
+            font-weight: 600;
+        }
+
+        .form-group select, .form-group input {
+            width: 100%;
+            padding: 12px;
+            border-radius: 8px;
+            border: 1px solid #475569;
+            background-color: #0f172a;
+            color: #ffffff;
+            font-size: 1rem;
+            outline: none;
+        }
+
+        .form-group select:focus, .form-group input:focus {
+            border-color: #0284c7;
+        }
+
+        /* Back to Home Link */
+        .back-link {
+            display: inline-block;
+            margin-bottom: 15px;
+            color: #38bdf8;
+            text-decoration: none;
+            font-size: 0.9rem;
+            font-weight: 600;
+        }
+
+        .back-link:hover {
+            text-decoration: underline;
+        }
+
+        /* Order Button */
+        .btn-whatsapp {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+            width: 100%;
+            background-color: #25D366;
+            color: #ffffff;
+            padding: 14px;
+            border: none;
+            border-radius: 8px;
+            font-size: 1.1rem;
+            font-weight: bold;
+            cursor: pointer;
+            margin-top: 20px;
+            transition: background 0.2s;
+        }
+
+        .btn-whatsapp:hover {
+            background-color: #1eb954;
+        }
+
+        /* Footer Styling */
+        footer {
+            position: relative;
+            z-index: 1;
+            background-color: rgba(15, 23, 42, 0.98);
+            border-top: 1px solid #334155;
+            padding: 20px;
+            text-align: center;
+            margin-top: auto;
+        }
+
+        .footer-content {
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        .footer-title {
+            color: #38bdf8;
+            font-size: 1.1rem;
+            margin-bottom: 10px;
+            font-weight: 600;
+        }
+
+        .footer-contact {
+            font-size: 0.95rem;
+            color: #cbd5e1;
+            line-height: 1.8;
+        }
+
+        .footer-contact a {
+            color: #38bdf8;
+            text-decoration: none;
+            font-weight: 500;
+        }
+
+        .footer-contact a:hover {
+            text-decoration: underline;
+        }
+
+        .badge-247 {
+            display: inline-block;
+            background-color: #0284c7;
+            color: #ffffff;
+            font-size: 0.75rem;
+            padding: 2px 8px;
+            border-radius: 12px;
+            margin-left: 6px;
+            vertical-align: middle;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Watermark Grid using images (1).jpeg -->
+    <div class="watermark-grid">
+        <img src="images (1).jpeg" alt="watermark">
+        <img src="images (1).jpeg" alt="watermark">
+        <img src="images (1).jpeg" alt="watermark">
+        <img src="images (1).jpeg" alt="watermark">
+        <img src="images (1).jpeg" alt="watermark">
+        <img src="images (1).jpeg" alt="watermark">
+    </div>
+
+    <div class="content-layer">
+        <header class="navbar">
+            <div class="logo">
+                <h2>RUIRU MABATI <span>FACTORY</span></h2>
+            </div>
+        </header>
+
+        <!-- Order Form Section -->
+        <div class="order-container">
+            <a href="index.html" class="back-link">&larr; Back to Catalog</a>
+            <h3>Place Your Order</h3>
+            <p class="subtitle">Select your roofing sheet type to order instantly via WhatsApp</p>
+
+            <form id="mabatiOrderForm">
+                <!-- Mabati Type Dropdown -->
+                <div class="form-group">
+                    <label for="mabatiType">Select Mabati Type & Price:</label>
+                    <select id="mabatiType" required>
+                        <option value="" disabled selected>-- Select Profile --</option>
+                        <option value="Jenga Tile (G28) - KES 650/m">Jenga Tile (G28) - KES 650 / meter</option>
+                        <option value="Jenga Tile (G30) - KES 550/m">Jenga Tile (G30) - KES 550 / meter</option>
+                        <option value="Brit Tile (G28) - KES 650/m">Brit Tile (G28) - KES 650 / meter</option>
+                        <option value="Brit Tile (G30) - KES 550/m">Brit Tile (G30) - KES 550 / meter</option>
+                        <option value="Box Profile (G28) - KES 500/m">Box Profile (G28) - KES 500 / meter</option>
+                        <option value="Box Profile (G30) - KES 400/m">Box Profile (G30) - KES 400 / meter</option>
+                        <option value="Corrugated (G28) - KES 400/m">Corrugated (G28) - KES 400 / meter</option>
+                        <option value="Corrugated (G30) - KES 350/m">Corrugated (G30) - KES 350 / meter</option>
+                        <option value="Dumuzaz Ordinary (G28) - KES 350/m">Dumuzaz Ordinary (G28) - KES 350 / meter</option>
+                        <option value="Dumuzaz Ordinary (G30) - KES 300/m">Dumuzaz Ordinary (G30) - KES 300 / meter</option>
+                    </select>
+                </div>
+
+                <!-- Quantity -->
+                <div class="form-group">
+                    <label for="quantity">Number of Sheets / Meters:</label>
+                    <input type="number" id="quantity" placeholder="e.g. 50" min="1" required>
+                </div>
+
+                <!-- Customer Name -->
+                <div class="form-group">
+                    <label for="customerName">Your Name:</label>
+                    <input type="text" id="customerName" placeholder="Enter your full name" required>
+                </div>
+
+                <!-- Delivery Location -->
+                <div class="form-group">
+                    <label for="location">Delivery Location / Town:</label>
+                    <input type="text" id="location" placeholder="e.g. Nakuru / Ruiru" required>
+                </div>
+
+                <button type="button" class="btn-whatsapp" onclick="sendWhatsAppOrder()">
+                    Order via WhatsApp
+                </button>
+            </form>
+        </div>
+    </div>
+
+    <!-- Website Footer -->
+    <footer>
+        <div class="footer-content">
+            <div class="footer-title">Need Assistance?</div>
+            <p class="footer-contact">
+                For more information call us on our direct phone: <br>
+                📞 <a href="tel:+254108227737">+254 108 227 737</a> <span class="badge-247">24/7 OPEN</span>
+            </p>
+            <p class="footer-contact" style="margin-top: 6px;">
+                ✉️ Email us: <a href="mailto:ruirumabati@gmail.com">ruirumabati@gmail.com</a>
+            </p>
+        </div>
+    </footer>
+
+    <!-- WhatsApp Redirect Script -->
+    <script>
+        function sendWhatsAppOrder() {
+            const myPhoneNumber = "254108227737"; 
+
+            const mabati = document.getElementById('mabatiType').value;
+            const qty = document.getElementById('quantity').value;
+            const name = document.getElementById('customerName').value;
+            const location = document.getElementById('location').value;
+
+            if (!mabati || !qty || !name || !location) {
+                alert("Please fill in all fields before placing your order!");
+                return;
+            }
+
+            const message = `Hello Ruiru Mabati Factory Ltd!%0A%0AI would like to place an order:%0A%0A*Mabati Type:* ${encodeURIComponent(mabati)}%0A*Quantity:* ${encodeURIComponent(qty)} meters/sheets%0A*Customer Name:* ${encodeURIComponent(name)}%0A*Delivery Location:* ${encodeURIComponent(location)}`;
+
+            const whatsappUrl = `https://wa.me/${myPhoneNumber}?text=${message}`;
+            window.open(whatsappUrl, '_blank');
+        }
+    </script>
+</body>
+</html>
